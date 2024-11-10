@@ -21,6 +21,7 @@ namespace UdemyCarBookDomain.Entities
         public string BigİmageUrl { get; set; }
         public List<CarFeature> CarFeatures { get; set; }
         public List<CarDescription> CarDescriptions { get; set; }
+        public List<CarPricing> CarPricings{ get; set; }
 
     }
 }
