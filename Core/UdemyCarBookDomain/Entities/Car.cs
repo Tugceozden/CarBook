@@ -19,6 +19,8 @@ namespace UdemyCarBookDomain.Entities
         public byte Luggage { get; set; }
         public string Fuel { get; set; }
         public string BigİmageUrl { get; set; }
+        public List<CarFeature> CarFeatures { get; set; }
+        public List<CarDescription> CarDescriptions { get; set; }
 
     }
 }
