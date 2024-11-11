@@ -12,7 +12,7 @@ namespace UdemyCarBook.Persistence.Context
 	{
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer("Serve=CASPER; initial Catalog=UdemyCarBookDb;integrated Security=true");
+			optionsBuilder.UseSqlServer("Server=CASPER; initial Catalog=UdemyCarBookDb;integrated Security=true; TrustServerCertificate=true;");
 
 
 

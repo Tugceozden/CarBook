@@ -8,7 +8,7 @@ namespace UdemyCarBookDomain.Entities
 {
 	public class FooterAddress
 	{
-        public int FooterAddressIds { get; set; }
+        public int FooterAddressId { get; set; }
         public string Description { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
