@@ -10,4 +10,8 @@
     <Folder Include="Features\CQRS\Commands\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UdemyCarBookDomain\UdemyCarBookDomain.csproj" />
+  </ItemGroup>
+
 </Project>
