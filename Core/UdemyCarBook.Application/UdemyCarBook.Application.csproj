@@ -10,4 +10,8 @@
     <ProjectReference Include="..\UdemyCarBookDomain\UdemyCarBookDomain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UdemyCarBookDomain\UdemyCarBookDomain.csproj" />
+  </ItemGroup>
+
 </Project>

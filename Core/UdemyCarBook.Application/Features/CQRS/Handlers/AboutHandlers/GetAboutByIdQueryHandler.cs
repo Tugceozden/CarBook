@@ -24,7 +24,7 @@ namespace UdemyCarBook.Application.Features.CQRS.Handlers.AboutHandlers
 			var values =await  _repository.GetByIdAsync(query.Id);
 			return new GetAboutByIdQueryResult
 			{
-				AboutId = values.AboutId
+				AboutId = values.AboutId,
 				Description = values.Description,
 				ImageUrl = values.ImageUrl,
 				Title = values.Title,
