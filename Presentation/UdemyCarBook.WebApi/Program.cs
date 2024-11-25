@@ -1,8 +1,12 @@
 using UdemyCarBook.Application.Features.CQRS.Handlers.AboutHandlers;
+using UdemyCarBook.Persistence.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<CarBookContext>();
+
+
 builder.Services.AddScoped<GetAboutQueryHandler>();	
 builder.Services.AddScoped<GetAboutByIdQueryHandler>();	
 builder.Services.AddScoped<CreateAboutCommandHandler>();	
