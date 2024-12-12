@@ -59,12 +59,12 @@ namespace UdemyCarBook.WebApi.Controllers
 			return Ok("bilgi silindi.");
 
 		}
-		[HttpPost]
+		[HttpPut]
 
 		public async Task<IActionResult> UpdateBanner(UpdateBannerCommand command)
 		{
 			await _updateBannerCommandHandler.Handle(command);
-			return Ok(" bilgi eklendi.");
+			return Ok(" bilgi güncellendi.");
 
 		}
 
