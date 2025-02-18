@@ -10,7 +10,7 @@ using UdemyCarBookDomain.Entities;
 
 namespace UdemyCarBook.Application.Features.CQRS.Handlers.BrandHandlers
 {
-	public  class GetBrandQueryHandler
+	public class GetBrandQueryHandler
 	{
 
 		private readonly IRepository<Brand> _repository;
@@ -34,4 +34,5 @@ namespace UdemyCarBook.Application.Features.CQRS.Handlers.BrandHandlers
 
 
 		}
+	}
 }

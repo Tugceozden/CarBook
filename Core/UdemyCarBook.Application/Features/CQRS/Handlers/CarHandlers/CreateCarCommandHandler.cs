@@ -10,7 +10,7 @@ using UdemyCarBookDomain.Entities;
 
 namespace UdemyCarBook.Application.Features.CQRS.Handlers.CarHandlers
 {
-	public  class CreateCarCommandHandler
+	public class CreateCarCommandHandler
 	{
 		private readonly IRepository<Car> repository;
 
@@ -24,15 +24,15 @@ namespace UdemyCarBook.Application.Features.CQRS.Handlers.CarHandlers
 
 			await repository.CreateAsync(new Car
 			{
-            BigİmageUrl=command.BigİmageUrl,
-			Fuel=command.Fuel,	
-			KM=command.KM,	
-			Luggage=command.Luggage,	
-			Model=command.Model,	
-			Seat=command.Seat,
-			BrandId=command.BrandId,	
-			Transmission=command.Transmission,
-			CoverImageUrl=command.CoverImageUrl,	
+				BigİmageUrl = command.BigImageUrl,
+				Fuel = command.Fuel,
+				KM = command.KM,
+				Luggage = command.Luggage,
+				Model = command.Model,
+				Seat = command.Seat,
+				BrandId = command.BrandId,
+				Transmission = command.Transmission,
+				CoverImageUrl = command.CoverImageUrl,
 
 			});
 
@@ -42,3 +42,4 @@ namespace UdemyCarBook.Application.Features.CQRS.Handlers.CarHandlers
 
 		}
 	}
+}

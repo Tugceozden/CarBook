@@ -12,7 +12,7 @@ using UdemyCarBookDomain.Entities;
 
 namespace UdemyCarBook.Application.Features.CQRS.Handlers.CarHandlers
 {
-	public  class GetCarByIdQueryHandler
+	public class GetCarByIdQueryHandler
 	{
 		private readonly IRepository<Car> _repository;
 
@@ -27,14 +27,14 @@ namespace UdemyCarBook.Application.Features.CQRS.Handlers.CarHandlers
 			{
 				CarId = values.CarId,
 				BrandId = values.BrandId,
-				BigİmageUrl=values.BigİmageUrl,
-				CoverImageUrl=values.CoverImageUrl,	
-				Fuel=values.Fuel,
-				KM=values.KM,	
-				Transmission=values.Transmission,
-				Model=values.Model,
-			    Luggage=values.Luggage,
-				Seat=values.Seat,
+				BigİmageUrl = values.BigİmageUrl,
+				CoverImageUrl = values.CoverImageUrl,
+				Fuel = values.Fuel,
+				KM = values.KM,
+				Transmission = values.Transmission,
+				Model = values.Model,
+				Luggage = values.Luggage,
+				Seat = values.Seat,
 
 
 			};
@@ -43,4 +43,5 @@ namespace UdemyCarBook.Application.Features.CQRS.Handlers.CarHandlers
 
 
 		}
+	}
 }
