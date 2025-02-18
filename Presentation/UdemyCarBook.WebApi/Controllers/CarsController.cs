@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using UdemyCarBook.Application.Features.CQRS.Commands.CarCommands;
+using UdemyCarBook.Application.Features.CQRS.Handlers.AboutHandlers;
+using UdemyCarBook.Application.Features.CQRS.Handlers.CarHandlers;
 using UdemyCarBook.Application.Features.CQRS.Handlers.CarHandlers;
 using UdemyCarBook.Application.Features.CQRS.Queries.CarQueries;
 
@@ -37,6 +40,7 @@ namespace UdemyCarBook.WebApi.Controllers
 			var values = await _getCarQueryHandler.Handle();
 			return Ok(values);
 		}
+		[HttpGet("{id}")]
 
 		// ID'ye göre tek bir arabayı getir
 		[HttpGet("{id}")]
@@ -75,5 +79,13 @@ namespace UdemyCarBook.WebApi.Controllers
 			await _updateCarCommandHandler.Handle(command);
 			return Ok("Araba bilgisi güncellendi.");
 		}
+
 	}
+
+
+
 }
+
+
+	
+
