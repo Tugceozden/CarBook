@@ -1,6 +1,7 @@
 using UdemyCarBook.Application.Features.CQRS.Handlers.AboutHandlers;
 using UdemyCarBook.Application.Features.CQRS.Handlers.BannerHandlers;
 using UdemyCarBook.Application.Features.CQRS.Handlers.CarHandlers;
+using UdemyCarBook.Application.Features.CQRS.Results.CarResults;
 using UdemyCarBook.Application.Interfaces;
 using UdemyCarBook.Application.Interfaces.CarInterfaces;
 using UdemyCarBook.Persistence.Context;
