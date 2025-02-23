@@ -44,7 +44,7 @@ namespace UdemyCarBook.WebApi.Controllers
 			var values = await _getCarQueryHandler.Handle();
 			return Ok(values);
 		}
-		[HttpGet("{id}")]
+		
 
 		// ID'ye göre tek bir arabayı getir
 		[HttpGet("{id}")]
@@ -84,7 +84,7 @@ namespace UdemyCarBook.WebApi.Controllers
 			return Ok("Araba bilgisi güncellendi.");
 		}
 		[HttpGet("GetCarWhithBrand")]
-		public async Task<IActionResult> GetCarWhithBrand()
+		public IActionResult GetCarWhithBrand()
 		{
 			var values =  _getCarWhithBrandQueryHandler.Handle();
 				return Ok(values);
