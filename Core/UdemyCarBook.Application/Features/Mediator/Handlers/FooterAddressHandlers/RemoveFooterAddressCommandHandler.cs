@@ -17,7 +17,7 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.FooterAddressHandl
 		}
 
 		public async Task Handle(RemoveFooterAddressCommand request, CancellationToken cancellationToken)
-		{
+	{
 			var values=await _repository.GetByIdAsync(request.Id);
 			await _repository.RemoveAsync(values);
 		}
