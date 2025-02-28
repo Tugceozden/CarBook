@@ -9,7 +9,7 @@ namespace UdemyCarBook.Application.Services
 
 		public static void AddApplicationService(this IServiceCollection services ,IConfiguration configuration)
 		{
-
+			services.AddMediatR(cfg=>cfg.RegisterServicesFromAssembly(typeof(ServiceRegistiration).Assembly));
 		}
 		
 
