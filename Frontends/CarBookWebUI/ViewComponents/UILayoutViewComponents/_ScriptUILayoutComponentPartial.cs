@@ -4,7 +4,7 @@ namespace CarBookWebUI.ViewComponents.UILayoutViewComponents
 {
     public class _ScriptUILayoutComponentPartial:ViewComponent
     {
-        public IViewComponentResult Invooke()
+        public IViewComponentResult Invoke()
         {
             return View();  
         }
