@@ -32,19 +32,19 @@ namespace UdemyCarBook.WebApi.Controllers
         public async Task<IActionResult> CreateTestimonial(CreateTestimonialCommand command)
         {
             await _mediator.Send(command);
-            return Ok("Lokasyon başarıyla eklendi.");
+            return Ok("Referans başarıyla eklendi.");
         }
         [HttpDelete]
         public async Task<IActionResult> RemoveFaeture(int id)
         {
             await _mediator.Send(new RemoveTestimonialCommand(id));
-            return Ok("Lokasyon başarıyla silindi.");
+            return Ok("Referans başarıyla silindi.");
         }
         [HttpPut]
         public async Task<IActionResult> UpdateTestimonial(UpdateTestimonialCommand command)
         {
             await _mediator.Send(command);
-            return Ok("Lokasyon başarıyla güncellendi.");
+            return Ok("Referans başarıyla güncellendi.");
         }
 
 
