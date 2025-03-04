@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CarBook.Dto.TestimonialDto;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace CarBookWebUI.ViewComponents.TestimonialViewComponents
@@ -20,7 +21,7 @@ namespace CarBookWebUI.ViewComponents.TestimonialViewComponents
             {
 
                 var JsonData= await responseMessage.Content.ReadAsStringAsync();  
-                var values=JsonConvert.DeserializeObject<List<string>>(JsonData);   
+                var values=JsonConvert.DeserializeObject<List<ResultTestimonialDto>>(JsonData);   
                 return View(values);
 
             }
