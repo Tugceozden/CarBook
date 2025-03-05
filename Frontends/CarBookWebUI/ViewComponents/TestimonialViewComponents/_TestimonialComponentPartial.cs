@@ -1,5 +1,4 @@
-﻿using CarBook.Dto.AboutDtos;
-using CarBook.Dto.TestimonialDto;
+﻿using CarBook.Dto.TestimonialDto;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
