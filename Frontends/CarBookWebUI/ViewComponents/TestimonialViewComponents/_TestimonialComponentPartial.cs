@@ -1,4 +1,5 @@
-﻿using CarBook.Dto.TestimonialDto;
+﻿using CarBook.Dto.AboutDtos;
+using CarBook.Dto.TestimonialDto;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -16,7 +17,7 @@ namespace CarBookWebUI.ViewComponents.TestimonialViewComponents
         public async Task< IViewComponentResult> InvokeAsync()
         {
             var client= _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("");
+            var responseMessage = await client.GetAsync("https://localhost:7012/api/Testimonials");
          if(responseMessage.IsSuccessStatusCode) 
             {
 
@@ -25,7 +26,7 @@ namespace CarBookWebUI.ViewComponents.TestimonialViewComponents
                 return View(values);
 
             }
-         return View();
+            return View(new List<ResultTestimonialDto>());
         }
     }
 }
