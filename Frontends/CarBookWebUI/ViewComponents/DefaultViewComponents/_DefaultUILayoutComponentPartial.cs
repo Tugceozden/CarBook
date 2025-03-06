@@ -1,19 +1,22 @@
-﻿using CarBook.Dto.BannerDtos;
+﻿using CarBook.Dto.CarDtos;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using System.Net.Http;
+using CarBook.Dto.BannerDtos;
 
 namespace CarBookWebUI.ViewComponents.DefaultViewComponents
 {
-    public class _DefaultCoverUILayoutComponentPartial:ViewComponent
+    public class _DefaultUILayoutComponentPartial:ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public _DefaultCoverUILayoutComponentPartial(IHttpClientFactory httpClientFactory)
+        public _DefaultUILayoutComponentPartial(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
 
-        public async Task<IViewComponentResult> InvokeAsync()
+        public async Task< IViewComponentResult> InvokeAsync()
         {
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync("https://localhost:7012/api/Banners");
@@ -28,5 +31,8 @@ namespace CarBookWebUI.ViewComponents.DefaultViewComponents
             }
             return View(new List<ResultBannerDto>());
         }
+
     }
+       
+            
 }
