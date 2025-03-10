@@ -19,26 +19,30 @@ namespace UdemyCarBook.WebApi.Controllers
 		private readonly UpdateCarCommandHandler _updateCarCommandHandler;
 		private readonly RemoveCarCommandHandler _removeCarCommandHandler;
 		private readonly GetCarWhithBrandQueryHandler  _getCarWhithBrandQueryHandler;
+		private readonly GetLast5CarsWhithBrandQueryHandler  _getLast5CarsWhithBrandQueryHandler;
 
 
-		public CarsController(
-			CreateCarCommandHandler createCarCommandHandler,
-			GetCarByIdQueryHandler getCarByIdQueryHandler,
-			GetCarQueryHandler getCarQueryHandler,
-			UpdateCarCommandHandler updateCarCommandHandler,
-			RemoveCarCommandHandler removeCarCommandHandler,
-			GetCarWhithBrandQueryHandler getCarWhithBrandQueryHandler)
-		{
-			_createCarCommandHandler = createCarCommandHandler;
-			_getCarByIdQueryHandler = getCarByIdQueryHandler;
-			_getCarQueryHandler = getCarQueryHandler;
-			_updateCarCommandHandler = updateCarCommandHandler;
-			_removeCarCommandHandler = removeCarCommandHandler;
-			_getCarWhithBrandQueryHandler = getCarWhithBrandQueryHandler;	
-		}
 
-		// Tüm arabaları listele
-		[HttpGet]
+        public CarsController(
+            CreateCarCommandHandler createCarCommandHandler,
+            GetCarByIdQueryHandler getCarByIdQueryHandler,
+            GetCarQueryHandler getCarQueryHandler,
+            UpdateCarCommandHandler updateCarCommandHandler,
+            RemoveCarCommandHandler removeCarCommandHandler,
+            GetCarWhithBrandQueryHandler getCarWhithBrandQueryHandler,
+            GetLast5CarsWhithBrandQueryHandler getLast5CarsWhithBrandQueryHandler)
+        {
+            _createCarCommandHandler = createCarCommandHandler;
+            _getCarByIdQueryHandler = getCarByIdQueryHandler;
+            _getCarQueryHandler = getCarQueryHandler;
+            _updateCarCommandHandler = updateCarCommandHandler;
+            _removeCarCommandHandler = removeCarCommandHandler;
+            _getCarWhithBrandQueryHandler = getCarWhithBrandQueryHandler;
+            _getLast5CarsWhithBrandQueryHandler = getLast5CarsWhithBrandQueryHandler;
+        }
+
+        // Tüm arabaları listele
+        [HttpGet]
 		public async Task<IActionResult> CarList()
 		{
 			var values = await _getCarQueryHandler.Handle();
@@ -90,7 +94,14 @@ namespace UdemyCarBook.WebApi.Controllers
 				return Ok(values);
 		}
 
-	}
+        [HttpGet("GetLast5CarsWhithBrand")]
+        public IActionResult GetLast5CarsWhithBrand()
+        {
+            var values = _getLast5CarsWhithBrandQueryHandler.Handle();
+            return Ok(values);
+        }
+
+    }
 
 
 
