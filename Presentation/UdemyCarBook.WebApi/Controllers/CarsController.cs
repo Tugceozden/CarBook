@@ -18,8 +18,8 @@ namespace UdemyCarBook.WebApi.Controllers
 		private readonly GetCarQueryHandler _getCarQueryHandler;
 		private readonly UpdateCarCommandHandler _updateCarCommandHandler;
 		private readonly RemoveCarCommandHandler _removeCarCommandHandler;
-		private readonly GetCarWhithBrandQueryHandler  _getCarWhithBrandQueryHandler;
-		private readonly GetLast5CarsWhithBrandQueryHandler  _getLast5CarsWhithBrandQueryHandler;
+		private readonly GetCarWithBrandQueryHandler  _getCarWhithBrandQueryHandler;
+		private readonly GetLast5CarsWithBrandQueryHandler  _getLast5CarsWhithBrandQueryHandler;
 
 
 
@@ -29,8 +29,8 @@ namespace UdemyCarBook.WebApi.Controllers
             GetCarQueryHandler getCarQueryHandler,
             UpdateCarCommandHandler updateCarCommandHandler,
             RemoveCarCommandHandler removeCarCommandHandler,
-            GetCarWhithBrandQueryHandler getCarWhithBrandQueryHandler,
-            GetLast5CarsWhithBrandQueryHandler getLast5CarsWhithBrandQueryHandler)
+            GetCarWithBrandQueryHandler getCarWhithBrandQueryHandler,
+            GetLast5CarsWithBrandQueryHandler getLast5CarsWhithBrandQueryHandler)
         {
             _createCarCommandHandler = createCarCommandHandler;
             _getCarByIdQueryHandler = getCarByIdQueryHandler;
